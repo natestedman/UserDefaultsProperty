@@ -21,6 +21,8 @@
 		436A07251C91278B00CB3236 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436A071D1C9125D200CB3236 /* Result.framework */; };
 		436A07271C91279200CB3236 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 436A071B1C9125D200CB3236 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		436A07281C91279200CB3236 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 436A071D1C9125D200CB3236 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		436A072A1C9127FB00CB3236 /* UserDefaultsProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A07291C9127FB00CB3236 /* UserDefaultsProperty.swift */; };
+		436A072B1C9127FB00CB3236 /* UserDefaultsProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436A07291C9127FB00CB3236 /* UserDefaultsProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		436A07121C9125D200CB3236 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
 		436A071B1C9125D200CB3236 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
 		436A071D1C9125D200CB3236 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		436A07291C9127FB00CB3236 /* UserDefaultsProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				436A06D91C9121F900CB3236 /* UserDefaultsProperty.h */,
+				436A07291C9127FB00CB3236 /* UserDefaultsProperty.swift */,
 				436A06DB1C9121F900CB3236 /* Info.plist */,
 			);
 			path = UserDefaultsProperty;
@@ -362,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436A072A1C9127FB00CB3236 /* UserDefaultsProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436A072B1C9127FB00CB3236 /* UserDefaultsProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +499,7 @@
 		436A06EB1C9121F900CB3236 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -506,12 +513,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.natestedman.UserDefaultsProperty;
 				PRODUCT_NAME = UserDefaultsProperty;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		436A06EC1C9121F900CB3236 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -561,6 +570,7 @@
 		436A07071C91226600CB3236 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -575,6 +585,7 @@
 				PRODUCT_NAME = UserDefaultsProperty;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -582,6 +593,7 @@
 		436A07081C91226600CB3236 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

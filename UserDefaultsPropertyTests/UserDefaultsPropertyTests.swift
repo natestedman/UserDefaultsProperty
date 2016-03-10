@@ -8,10 +8,35 @@
 // You should have received a copy of the CC0 Public Domain Dedication along with
 // this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
+import UserDefaultsProperty
 import XCTest
-@testable import UserDefaultsProperty
 
 class UserDefaultsPropertyTests: XCTestCase
 {
+    func testUserDefaultsProperty()
+    {
+        let defaults = NSUserDefaults()
+        let key = "test"
+        defaults.setObject(nil, forKey: key)
 
+        let property = UserDefaultsProperty<Int?>(
+            userDefaults: defaults,
+            key: key,
+            fromValue: { $0 },
+            toValue: { $0 as? Int }
+        )
+
+        XCTAssertNil(property.value)
+        XCTAssertNil(defaults.objectForKey(key))
+
+        property.value = 1
+
+        XCTAssertEqual(property.value, 1)
+        XCTAssertEqual(defaults.integerForKey(key), 1)
+
+        defaults.setInteger(2, forKey: key)
+
+        XCTAssertEqual(property.value, 1)
+        XCTAssertEqual(defaults.integerForKey(key), 2)
+    }
 }
